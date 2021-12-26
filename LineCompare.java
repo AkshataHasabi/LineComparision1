@@ -16,11 +16,15 @@ public class LineCompare {
 		int value2= (int) Math.sqrt(Math.pow(x4-x3,  2) + Math.pow(y4-y3, 2));
 		Integer lineLength1 = new Integer(value1);	
 		Integer lineLength2 = new Integer(value2);
-		if(lineLength1.equals(lineLength2)) {
-			System.out.println("Lines are equall");
+		int result =lineLength1.compareTo(lineLength2);
+		if(result > 0) {
+			System.out.println("Line1 is greater than line2");
+		}
+		else if(result < 0) {
+			System.out.println("Line1 is less than line2");
 		}
 		else {
-			System.out.println("Lines are not equall");
+			System.out.println("Line1 is equall to line2");
 		}
 	}
 }
