@@ -3,13 +3,24 @@ package com.bridgelab.linecomparision;
 public class LineCompare {
 
 	public static void main(String[] args) {
-		int x1, x2, y1, y2;
-		double length;
+		int x1, x2, x3, x4, y1, y2, y3, y4;
 		x1=2;
 		x2=4;
+		x3=3;
+		x4=10;
 		y1=4;
 		y2=6;
-		length=Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1,  2));
-		System.out.println(length);
+		y3=5;
+		y4=7;
+		int value1= (int) Math.sqrt(Math.pow(x2-x1,  2) + Math.pow(y2-y1, 2));
+		int value2= (int) Math.sqrt(Math.pow(x4-x3,  2) + Math.pow(y4-y3, 2));
+		Integer lineLength1 = new Integer(value1);	
+		Integer lineLength2 = new Integer(value2);
+		if(lineLength1.equals(lineLength2)) {
+			System.out.println("Lines are equall");
+		}
+		else {
+			System.out.println("Lines are not equall");
+		}
 	}
 }
